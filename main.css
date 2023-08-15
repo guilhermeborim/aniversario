@@ -5,6 +5,7 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 header {
@@ -69,7 +70,7 @@ header {
     width: 100%;
 }
 .section__comidas img {
-    height: 300px;
+    height: 350px
 }
 .section__bebidas .bebidas h3,
 .section__comidas .comidas h3 {
@@ -93,4 +94,74 @@ header {
 .section__comidas {
     background-image: linear-gradient(#C2E4CB,#F7F3CF);
     padding: 100px 0;
+}
+
+@media (max-width: 820px) {
+    .container {
+        max-width: 80%;
+    }
+    .section__bebidas .container,
+    .section__comidas .container {
+    display: block;
+    }
+    .section__bebidas img,
+    .section__comidas img {
+    max-width: 100%;
+    }
+    .section__bebidas {
+        padding: 50px 0;
+    }
+    .bebidas h3 {
+        padding-bottom: 10px;
+    }
+    .bebidas p,
+    .comidas p {
+        padding-bottom: 20px;
+    }
+    .comidas h3 {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        max-width: 60%;
+    }
+    .hero__title h1 {
+        font-size: 24px;
+        line-height: 150%;
+        padding-top: 50px;
+    }
+    .hero__title h2 {
+        font-size: 18px;
+        padding-bottom: 50px;
+    }
+    .section__local {
+        padding: 50px 0;
+    }
+    
+    .local {
+        display: block;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 20px;
+        text-align: center;
+    }
+    .local__loc p,
+    .local__hora p {
+        padding: 10px 0;
+    }
+    
+    .local .local__confirma {
+        margin-top: 10px;
+        background-color: #F7F3CF;
+        border-radius: 20px;
+    }
+    .local .local__confirma h3 {
+        padding: 10px;
+        text-align: center;
+    }
+    .section__comidas {
+        padding:  0;
+    }
 }
